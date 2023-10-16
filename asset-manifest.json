@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/WesternUnion/static/css/main.adba867d.css",
+    "main.js": "/WesternUnion/static/js/main.6194417d.js",
+    "static/js/787.8022bd58.chunk.js": "/WesternUnion/static/js/787.8022bd58.chunk.js",
+    "index.html": "/WesternUnion/index.html",
+    "static/media/logo.wu.sm.svg": "/WesternUnion/static/media/logo.wu.sm.0f7d24451c8afc2f1bfd274a25b48153.svg",
+    "main.adba867d.css.map": "/WesternUnion/static/css/main.adba867d.css.map",
+    "main.6194417d.js.map": "/WesternUnion/static/js/main.6194417d.js.map",
+    "787.8022bd58.chunk.js.map": "/WesternUnion/static/js/787.8022bd58.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.adba867d.css",
+    "static/js/main.6194417d.js"
+  ]
+}
