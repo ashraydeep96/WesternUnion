@@ -24,7 +24,7 @@ function App() {
 
         <div style={{ paddingTop: '61px', paddingLeft: '65px' }}>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/WesternUnion" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/userManagement" element={<User />} />
             <Route path="/reports" element={<Reports />} />

@@ -15,7 +15,7 @@ const Sidebar = () => {
   return (
       <div className="vertical-navbar">
         <div className="top-content">
-        <Link className={`home ${activeLink === 1 ? 'active' : ''}`} to="/" onClick={() => handleLinkClick(1)}>
+        <Link className={`home ${activeLink === 1 ? 'active' : ''}`} to="/WesternUnion" onClick={() => handleLinkClick(1)}>
           <HomeOutlinedIcon />Home
         </Link>
         <Link className={`home ${activeLink === 2 ? 'active' : ''}`} to="/userManagement" onClick={() => handleLinkClick(2)}>
