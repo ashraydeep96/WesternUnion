@@ -1,6 +1,7 @@
 import React from 'react'
 import graph from "../../assets/graph.png";
 import './Reports.css'
+import { Link } from 'react-router-dom';
 
 const Reports = () => {
   return (
@@ -76,9 +77,9 @@ const Reports = () => {
                       <div className="bg-white shadow rounded-lg mb-4 p-4 sm:p-6 h-full">
                         <div className="flex items-center justify-between mb-4">
                             <h3 className="text-xl font-bold leading-none text-gray-900">Latest Customers</h3>
-                            <a href="/reports" className="text-sm font-medium text-cyan-600 hover:bg-gray-100 rounded-lg p-2" style={{textDecoration: "auto"}}>
+                            <Link to="/reports" className="text-sm font-medium text-cyan-600 hover:bg-gray-100 rounded-lg p-2" style={{textDecoration: "auto"}}>
                             View all
-                            </a>
+                            </Link>
                         </div>
                         <div className="flow-root">
                             <ul className="divide-y divide-gray-200">
