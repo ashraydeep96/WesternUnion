@@ -62,7 +62,7 @@ const Searchform = () => {
   }, []);
 
   //FormFields
-  const [mtcn, setMtcn] = useState("");
+  // const [mtcn, setMtcn] = useState("");
   const [Direction, setDirection] = useState("");
   const [Status, setStatus] = useState("");
   const [Fixed, setFixed] = useState("");
@@ -73,10 +73,9 @@ const Searchform = () => {
   //Search Filters
   const handleSearch = (event) => {
     event.preventDefault();
-    console.log(data, mtcn);
+    // console.log(data, mtcn);
     const newData = data.filter(
       (x) =>
-        (mtcn === "" || x.mtcn === mtcn.toString()) &&
         (Direction === "" || x.direction === Direction.toString()) &&
         (Status === "" || x.status === Status.toString()) &&
         (Fixed === "" || x.fixedTransaction === Fixed.toString()) &&
@@ -147,18 +146,6 @@ const Searchform = () => {
             <form onSubmit={handleSearch}>
               <div className="searchForm">
                 <h2>Transaction Criteria</h2>
-                <div className="form-floating">
-                  <input
-                    type="number"
-                    className="form-control"
-                    id="floatingTextarea"
-                    placeholder="MTCN"
-                    onChange={(e) => setMtcn(e.target.value)}
-                  />
-                  <label className="labell" htmlFor="floatingTextarea">
-                    MTCN
-                  </label>
-                </div>
                 <div className="form-floating2">
                   <lable className="labell" htmlFor="floatingTextarea">
                     Direction
