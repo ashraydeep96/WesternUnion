@@ -9,8 +9,9 @@ import { Link } from 'react-router-dom'
 const Settings = () => {
   return (
     <div>
+      {/* Path */}
       <div className="path">
-      <Link to="/" style={{ marginLeft: '10px', marginRight:'1px', color: 'blue', textDecoration: 'none', textSizeAdjust:'auto' }}>Home</Link>
+      <Link to="/WesternUnion" style={{ marginLeft: '10px', marginRight:'1px', color: 'blue', textDecoration: 'none', textSizeAdjust:'auto' }}>Home</Link>
       <span><ChevronRightOutlinedIcon fontSize="small" /></span>
       <Link className="onLink" style={{marginLeft:'1px', color: 'black', textDecoration: 'none', textSizeAdjust:'auto' }}>Settings</Link>
       </div>
@@ -20,7 +21,7 @@ const Settings = () => {
 
       {/* cards */}
       <div class="cards">
-        <Link class="card-1" to="/settings/statistical-groups">
+        <Link class="card-1" to="/reports">
           <SettingsOutlinedIcon sx={{ fontSize: 70 }} />
           <span>Stastical Groups</span>
           <div class="info-container">

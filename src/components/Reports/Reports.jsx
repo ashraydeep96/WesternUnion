@@ -76,7 +76,7 @@ const Reports = () => {
                   <div className="grid grid-cols-1 2xl:grid-cols-2 xl:gap-4 my-4">
                       <div className="bg-white shadow rounded-lg mb-4 p-4 sm:p-6 h-full">
                         <div className="flex items-center justify-between mb-4">
-                            <h3 className="text-xl font-bold leading-none text-gray-900">Latest Customers</h3>
+                            <h3 className="text-xl font-bold leading-none text-gray-900">Latest Users</h3>
                             <Link to="/reports" className="text-sm font-medium text-cyan-600 hover:bg-gray-100 rounded-lg p-2" style={{textDecoration: "auto"}}>
                             View all
                             </Link>

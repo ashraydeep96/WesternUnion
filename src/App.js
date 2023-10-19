@@ -29,7 +29,7 @@ function App() {
             <Route path="/userManagement" element={<User />} />
             <Route path="/reports" element={<Reports />} />
             <Route path="/settings" element={<Settings/>}/>
-              <Route path="/settings/statistical-groups" element={<Statistical/>}/>
+              <Route path="/reports" element={<Statistical/>}/>
               <Route path="/settings/search" element={<Search/>}/>
             <Route path="*"  element={<Error/>} />
           </Routes>

@@ -18,7 +18,9 @@ import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import Typography from "@mui/material/Typography";
+// import { Pagination } from "@mui/material";
 
+//Table Rows Styles
 const style = {
   position: "absolute",
   top: "50%",
@@ -42,6 +44,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   },
 }));
 
+//function Starts
 const Searchform = () => {
   const transactions = dbData.transactions;
   const [data, setData] = useState([]);
@@ -52,7 +55,9 @@ const Searchform = () => {
   const [selectedTransaction, setSelectedTransaction] = useState(null);
   const totalRecords = searchData ? searchData.length : 0;
   const rowsPerPageOptions = [5, 10, totalRecords];
-  const [totalPages,setTotalPages] = useState(Math.ceil(data.length / rowsPerPage));
+  const [totalPages, setTotalPages] = useState(
+    Math.ceil(data.length / rowsPerPage)
+  );
 
   //db
   useEffect(() => {
@@ -90,33 +95,38 @@ const Searchform = () => {
     setPage(0);
   };
 
+  //Table Rows Filters
   const countryNames = [
     ...new Set(
       transactions.map((transactions) => transactions.recordingCountry)
     ),
   ].sort();
+
   const payoutcountryNames = [
     ...new Set(transactions.map((transactions) => transactions.payOutCountry)),
   ].sort();
+
   const currency = [
     ...new Set(
       transactions.map((searchData) => searchData.sendingSideCurrency)
     ),
   ].sort();
+
   const fixed = [
     ...new Set(
       transactions.map((transactions) => transactions.fixedTransaction)
     ),
   ].sort((a, b) => a - b);
+
   const direction = [
     ...new Set(transactions.map((transactions) => transactions.direction)),
   ].sort();
+
   const status = [
     ...new Set(transactions.map((transactions) => transactions.status)),
   ].sort();
 
-  
-
+  // Pagination
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
   };
@@ -127,7 +137,7 @@ const Searchform = () => {
     setRowsPerPage(newRowsPerPage);
     setPage(0);
     setTotalPages(newTotalPages);
-    console.log(totalPages)
+    console.log(totalPages);
   };
 
   const [open, setOpen] = React.useState(false);
@@ -139,8 +149,8 @@ const Searchform = () => {
 
   return (
     <div>
-      {/* Search Form */}
       <div className="row" style={{ width: "100%", marginTop: "1rem" }}>
+        {/* Search Form */}
         <div className="col-4">
           <div className="searchContainer">
             <form onSubmit={handleSearch}>
@@ -377,70 +387,70 @@ const Searchform = () => {
                           );
                         })
                     : data
-                    .slice(
-                      page * rowsPerPage,
-                      page * rowsPerPage + rowsPerPage
-                    )
-                    .map((transaction) => {
-                      return (
-                        <TableRow
-                          hover
-                          role="checkbox"
-                          tabIndex={-1}
-                          key={transaction.id}
-                        >
-                          <TableCell align="center">
-                            <IconButton
-                              aria-label="delete"
-                              onClick={() => handleOpen(transaction)}
+                        .slice(
+                          page * rowsPerPage,
+                          page * rowsPerPage + rowsPerPage
+                        )
+                        .map((transaction) => {
+                          return (
+                            <TableRow
+                              hover
+                              role="checkbox"
+                              tabIndex={-1}
+                              key={transaction.id}
                             >
-                              <VisibilityIcon />
-                            </IconButton>
-                          </TableCell>
-                          <TableCell align="center">
-                            {transaction.id}
-                          </TableCell>
-                          <TableCell align="center">
-                            {transaction.mtcn}
-                          </TableCell>
-                          <TableCell align="center">
-                            {transaction.transactionType}
-                          </TableCell>
-                          <TableCell align="center">
-                            {transaction.sendingSideCurrency}
-                          </TableCell>
-                          <TableCell align="center">
-                            {transaction.sendingSideCurrency}
-                          </TableCell>
-                          <TableCell align="center">
-                            {transaction.recordingCountry}
-                          </TableCell>
-                          <TableCell align="center">
-                            {transaction.payOutCountry}
-                          </TableCell>
-                          <TableCell align="center">
-                            {transaction.status}
-                          </TableCell>
-                          <TableCell align="center">
-                            {transaction.direction}
-                          </TableCell>
-                          <TableCell align="center">
-                            {transaction.settlementStatus}
-                          </TableCell>
-                          <TableCell align="center">
-                            {transaction.recordingDate}
-                          </TableCell>
-                          <TableCell align="center">
-                            {transaction.sendingSideCountry}
-                          </TableCell>
-                        </TableRow>
-                      );
-                    })}
+                              <TableCell align="center">
+                                <IconButton
+                                  aria-label="delete"
+                                  onClick={() => handleOpen(transaction)}
+                                >
+                                  <VisibilityIcon />
+                                </IconButton>
+                              </TableCell>
+                              <TableCell align="center">
+                                {transaction.id}
+                              </TableCell>
+                              <TableCell align="center">
+                                {transaction.mtcn}
+                              </TableCell>
+                              <TableCell align="center">
+                                {transaction.transactionType}
+                              </TableCell>
+                              <TableCell align="center">
+                                {transaction.sendingSideCurrency}
+                              </TableCell>
+                              <TableCell align="center">
+                                {transaction.sendingSideCurrency}
+                              </TableCell>
+                              <TableCell align="center">
+                                {transaction.recordingCountry}
+                              </TableCell>
+                              <TableCell align="center">
+                                {transaction.payOutCountry}
+                              </TableCell>
+                              <TableCell align="center">
+                                {transaction.status}
+                              </TableCell>
+                              <TableCell align="center">
+                                {transaction.direction}
+                              </TableCell>
+                              <TableCell align="center">
+                                {transaction.settlementStatus}
+                              </TableCell>
+                              <TableCell align="center">
+                                {transaction.recordingDate}
+                              </TableCell>
+                              <TableCell align="center">
+                                {transaction.sendingSideCountry}
+                              </TableCell>
+                            </TableRow>
+                          );
+                        })}
                 </TableBody>
               </Table>
             </TableContainer>
             <div className="d-grid d-md-flex justify-content-md-around mb-2 mt-3">
-              {/* Download Button */}
+              {/* Download Data Button */}
               <ReactHTMLTableToExcel
                 id="test-table-xls-button"
                 className="download-table-xls-button btn_dwn"
@@ -477,6 +487,7 @@ const Searchform = () => {
                 },
               }}
             >
+              {/* View data card */}
               <Fade in={open}>
                 <Box sx={style} style={{ width: "683px" }}>
                   <Typography

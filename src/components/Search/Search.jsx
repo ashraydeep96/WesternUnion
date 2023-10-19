@@ -3,12 +3,14 @@ import ChevronRightOutlinedIcon from '@mui/icons-material/ChevronRightOutlined';
 import { Link } from "react-router-dom";
 import Searchform from "../Searchform/Searchform";
 
+// SearchPage
+
 const Search = () => {
   return (
     <div>
       <div className="path">
         <Link
-          to="/"
+          to="/WesternUnion"
           style={{
             marginLeft: "10px",
             marginRight: "1px",

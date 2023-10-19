@@ -9,6 +9,8 @@ import { Link } from 'react-router-dom';
 const NavbarComponent = () => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top">
+
+        {/* Logo */}
         <Link to="/" style={{ marginTop:'10px', color: 'white', textDecoration: 'none' }}>
           <img src={logo} alt="Logo" width="30" height="24" className="d-inline-block align-text-top" style={{height:'34px', width:'42px'}} />
           <b>WesternUnion</b>
@@ -16,8 +18,9 @@ const NavbarComponent = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            {/* Other nav items */}
           </Nav>
+
+          {/* Left Icons */}
           <Nav className="ml-auto d-flex align-items-center">
           <div className="language-change">
             <LanguageIcon/>
