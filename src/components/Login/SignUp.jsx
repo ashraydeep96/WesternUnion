@@ -2,20 +2,25 @@ import React, { useState } from 'react'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import SIgn_img from './SIgn_img'
-import { NavLink, useNavigate } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+  import 'react-toastify/dist/ReactToastify.css';
 
-const Login = () => {
+const Home = () => {
 
     const history = useNavigate();
 
     const [inpval, setInpval] = useState({
+        name: "",
         email: "",
+        date: "",
         password: ""
     })
 
-    const [data, setData] = useState([]);
+   
+
+    const [data,setData] = useState([]);
     console.log(inpval);
 
     const getdata = (e) => {
@@ -38,44 +43,37 @@ const Login = () => {
     const addData = (e) => {
         e.preventDefault();
 
-        const getuserArr = localStorage.getItem("useryoutube");
-        console.log(getuserArr);
+        const { name, email, date, password } = inpval;
 
-        const { email, password } = inpval;
-        if (email === "") {
-            toast.error('email field is requred', {
+        if (name === "") {
+            toast.error(' name field is requred!',{
+                position: "top-center",
+            });
+        } else if (email === "") {
+             toast.error('email field is requred',{
                 position: "top-center",
             });
         } else if (!email.includes("@")) {
-            toast.error('plz enter valid email addres', {
+             toast.error('plz enter valid email addres',{
+                position: "top-center",
+            });
+        } else if (date === "") {
+             toast.error('date field is requred',{
                 position: "top-center",
             });
         } else if (password === "") {
-            toast.error('password field is requred', {
+             toast.error('password field is requred',{
                 position: "top-center",
             });
         } else if (password.length < 5) {
-            toast.error('password length greater five', {
+             toast.error('password length greater five',{
                 position: "top-center",
             });
         } else {
+            console.log("data added succesfully");
+            history("/login")
+            localStorage.setItem("useryoutube",JSON.stringify([...data,inpval]));
 
-            if (getuserArr && getuserArr.length) {
-                const userdata = JSON.parse(getuserArr);
-                const userlogin = userdata.filter((el, k) => {
-                    return el.email === email && el.password === password
-                });
-
-                if (userlogin.length === 0) {
-                    alert("invalid details")
-                } else {
-                    console.log("user login succesfulyy");
-
-                    localStorage.setItem("user_login", JSON.stringify(userlogin))
-
-                    history("/details")
-                }
-            }
         }
 
     }
@@ -85,23 +83,31 @@ const Login = () => {
             <div className="container mt-3">
                 <section className='d-flex justify-content-between'>
                     <div className="left_data mt-3 p-3" style={{ width: "100%" }}>
-                        <h3 className='text-center col-lg-6'>Sign IN</h3>
+                        <h3 className='text-center col-lg-6'>Sign Up</h3>
                         <Form >
+                            <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
 
+                                <Form.Control type="text" name='name' onChange={getdata} placeholder="Enter Your Name" />
+                            </Form.Group>
                             <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
 
                                 <Form.Control type="email" name='email' onChange={getdata} placeholder="Enter email" />
+                            </Form.Group>
+
+                            <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
+
+                                <Form.Control onChange={getdata} name='date' type="date" />
                             </Form.Group>
 
                             <Form.Group className="mb-3 col-lg-6" controlId="formBasicPassword">
 
                                 <Form.Control type="password" name='password' onChange={getdata} placeholder="Password" />
                             </Form.Group>
-                            <Button variant="primary" className='col-lg-6' onClick={addData} style={{ background: "rgb(67, 185, 127)" }} type="submit">
+                            <Button variant="primary" className='col-lg-6' onClick={() => {history('/home')}} style={{ background: "rgb(67, 185, 127)" }} type="submit">
                                 Submit
                             </Button>
                         </Form>
-                        <p className='mt-3'>Already Have an Account <span><NavLink to="/signup">Signup</NavLink></span> </p>
+                        <p className='mt-3'>Already Have an Account <span><NavLink to="/login">SignIn</NavLink></span> </p>
                     </div>
                     <SIgn_img />
                 </section>
@@ -111,4 +117,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default Home
