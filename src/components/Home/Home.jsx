@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import Button from "react-bootstrap/Button";
+// import Button from "react-bootstrap/Button";
 import PriceCheckRoundedIcon from "@mui/icons-material/PriceCheckRounded";
 import SendToMobileRoundedIcon from "@mui/icons-material/SendToMobileRounded";
 // import Contact from "./Contact";
