@@ -28,7 +28,7 @@ function App() {
           <Routes>
             <Route path="/WesternUnion" element={<Home />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/userManagement" element={<User />} />
+            <Route path="/userManagement" element={<UserManagement />} />
             <Route path="/reports" element={<Reports />} />
             <Route path="/contactus" element={<Contact />} />
             <Route path="/ourteam" element={<OurTeam />} />
