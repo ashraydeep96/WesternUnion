@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import SIgn_img from './SIgn_img'
+import './Login.css'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -97,9 +98,9 @@ const Login = () => {
 
                                 <Form.Control type="password" name='password' onChange={getdata} placeholder="Password" />
                             </Form.Group>
-                            <Button variant="primary" className='col-lg-6' onClick={addData} style={{ background: "rgb(67, 185, 127)" }} type="submit">
+                            <button variant="primary" className='col-lg-6 button_sub' onClick={addData} type="submit">
                                 Submit
-                            </Button>
+                            </button>
                         </Form>
                         <p className='mt-3'>Already Have an Account <span><NavLink to="/signup">Signup</NavLink></span> </p>
                     </div>
