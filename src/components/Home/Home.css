@@ -7,3 +7,22 @@
 .ccc{
     margin-left: 50px;
 }
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.button{
+    background: rgb(0, 0, 0);
+    padding: 10;
+    margin: 10;
+    height: 30;
+    width: 50;
+}
+.contact{
+    margin-left: 10px;
+    margin-right: 10px;
+}
