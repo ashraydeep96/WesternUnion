@@ -1,0 +1,10 @@
+.button_sub {
+    /* width: 100%; */
+    width: 52% !important;
+    margin: 5% 0 !important;
+    padding: 2% !important;
+    background-color: rgb(255 221 0) !important;
+    color: black !important;
+    border: none !important;
+    border-radius: 20px !important;
+}
