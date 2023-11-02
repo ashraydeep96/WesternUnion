@@ -5,7 +5,7 @@ import Navbar from './components/Navbar/Navbar';
 import Sidebar from './components/Sidebar/Sidebar';
 import Home from './components/Home/Home';
 import Reports from './components/Reports/Reports';
-import User from './components/User/User';
+// import User from './components/User/User';
 import Error from './components/Error/Error';
 import Login from './components/Login/Login';
 import Settings from './components/Settings/Settings';
@@ -16,6 +16,7 @@ import Statistical from './components/Statical/Statistical';
 import Search from './components/Search/Search';
 import Contact from './components/Home/Contact';
 import OurTeam from './components/Home/OurTeam';
+import UserManagement from './components/User/UserManagement';
 
 function App() {
   return (
