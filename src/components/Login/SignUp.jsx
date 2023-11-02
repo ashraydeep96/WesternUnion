@@ -103,9 +103,9 @@ const Home = () => {
 
                                 <Form.Control type="password" name='password' onChange={getdata} placeholder="Password" />
                             </Form.Group>
-                            <Button variant="primary" className='col-lg-6' onClick={() => {history('/home')}} style={{ background: "rgb(67, 185, 127)" }} type="submit">
+                            <button variant="primary" className='col-lg-6 button_sub' onClick={() => {history('/home')}} type="submit">
                                 Submit
-                            </Button>
+                            </button>
                         </Form>
                         <p className='mt-3'>Already Have an Account <span><NavLink to="/login">SignIn</NavLink></span> </p>
                     </div>
