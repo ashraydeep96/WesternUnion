@@ -27,12 +27,13 @@ const Contact = () => {
             <textarea
               name="message"
               id=""
+              placeholder="Type Your Message"
               cols="30"
               rows="6"
               autoComplete="off"
               required
             ></textarea>
-            <input type="submit" value="send" />
+            <input type="submit" value="send" className="btnContact" />
           </form>
         </div>
       </div>

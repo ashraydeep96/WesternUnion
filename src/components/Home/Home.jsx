@@ -112,7 +112,7 @@ const Home = () => {
           <div className="buttons">
             <button
               varient="primary"
-              className="btn"
+              className="btnContact"
               type="submit"
               onClick={navigation}
             >
@@ -120,7 +120,7 @@ const Home = () => {
             </button>
             <button
               varient="primary"
-              className="btn"
+              className="btnContact"
               type="submit"
               onClick={() => {
                 history("/ourteam");

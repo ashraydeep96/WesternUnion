@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Form from 'react-bootstrap/Form'
-import Button from 'react-bootstrap/Button'
-import SIgn_img from './SIgn_img'
+// import Button from 'react-bootstrap/Button'
+import Signimg from './SIgn_img'
 import { NavLink } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
@@ -109,7 +109,7 @@ const Home = () => {
                         </Form>
                         <p className='mt-3'>Already Have an Account <span><NavLink to="/login">SignIn</NavLink></span> </p>
                     </div>
-                    <SIgn_img />
+                    <Signimg />
                 </section>
                 <ToastContainer />
             </div>

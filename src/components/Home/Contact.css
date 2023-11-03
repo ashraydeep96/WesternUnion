@@ -14,11 +14,8 @@ input, textarea{
     input[type="submit"]{
         max-width: 10rem;
         margin-top: 2rem;
-        background-color: blue;
         color: whitesmoke;
         padding: 1.4rem 2.2rem;
-        border-style: solid;
-        border-width: .1rem;
         text-transform: uppercase;
         font-size: 1.8rem;
         cursor: pointer;
@@ -50,3 +47,13 @@ input, textarea{
         transform: scale(0.9);
     } */
     
+    .btnContact {
+        /* width: 100%; */
+        width: 40% !important;
+        margin: 5% 0 !important;
+        padding: 2% !important;
+        background-color: rgb(255 221 0) !important;
+        color: black !important;
+        border: none !important;
+        border-radius: 20px !important;
+    }

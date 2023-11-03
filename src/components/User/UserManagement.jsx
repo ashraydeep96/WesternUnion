@@ -44,11 +44,11 @@ const UserManagement = () => {
 
       const sampleUsers = [
 
-        { id: 1, firstName: 'Tanmay', lastName: 'Yadav', phoneNumber: '123-456-7890', email: 'Tanmay@example.com', role: 'User', disabled: false },
+        { id: 1, firstName: 'Pankaj', lastName: 'Yadav', phoneNumber: '123-456-7890', email: 'Tanmay@example.com', role: 'User', disabled: false },
 
-        { id: 2, firstName: 'Keshav', lastName: 'Das', phoneNumber: '987-654-3210', email: 'Keshav@example.com', role: 'Admin', disabled: true },
+        { id: 2, firstName: 'Om', lastName: 'Das', phoneNumber: '987-654-3210', email: 'Keshav@example.com', role: 'Admin', disabled: true },
 
-        { id: 3, firstName: 'Nirbhay', lastName: 'Kumar', phoneNumber: '987-654-3210', email: 'Nirbhay@example.com', role: 'Security', disabled: false },
+        { id: 3, firstName: 'Ashray', lastName: 'Kumar', phoneNumber: '987-654-3210', email: 'Nirbhay@example.com', role: 'Security', disabled: false },
 
         { id: 4, firstName: 'Rakshit', lastName: 'Diwan', phoneNumber: '901-529-1563', email: 'Rakshit@example.com', role: 'Admin', disabled: true },
 
