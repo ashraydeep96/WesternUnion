@@ -11,7 +11,7 @@ const NavbarComponent = () => {
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top">
 
         {/* Logo */}
-        <Link to="/" style={{ marginTop:'10px', color: 'white', textDecoration: 'none' }}>
+        <Link to="/home" style={{ marginTop:'10px', color: 'white', textDecoration: 'none' }}>
           <img src={logo} alt="Logo" width="30" height="24" className="d-inline-block align-text-top" style={{height:'34px', width:'42px'}} />
           <b>WesternUnion</b>
         </Link>
