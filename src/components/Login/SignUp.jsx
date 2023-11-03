@@ -103,7 +103,7 @@ const Home = () => {
 
                                 <Form.Control type="password" name='password' onChange={getdata} placeholder="Password" />
                             </Form.Group>
-                            <button variant="primary" className='col-lg-6 button_sub' onClick={() => {history('/home')}} type="submit">
+                            <button variant="primary" className='col-lg-6 button_sub' onClick={addData} type="submit">
                                 Submit
                             </button>
                         </Form>
