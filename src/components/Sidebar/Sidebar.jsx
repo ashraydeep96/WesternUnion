@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './Sidebar.css'
+import './Sidebar.scss'
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import GroupOutlinedIcon from '@mui/icons-material/GroupOutlined';
 import PollOutlinedIcon from '@mui/icons-material/PollOutlined';

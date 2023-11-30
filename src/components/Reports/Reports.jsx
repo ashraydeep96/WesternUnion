@@ -1,6 +1,6 @@
 import React from 'react'
 import graph from "../../assets/graph.png";
-import './Reports.css'
+import './Reports.scss'
 import { Link } from 'react-router-dom';
 
 const Reports = () => {

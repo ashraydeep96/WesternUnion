@@ -1,5 +1,5 @@
 import React from "react";
-import './OurTeam.css'
+import './OurTeam.scss'
 function OurTeam() {
   let message = `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro quia facere totam doloribus, magni corporis amet beatae qui aut dolores.`;
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import './Navbar.css'
+import './Navbar.scss'
 import profile from "../../assets/profile.png";
 import logo from "../../assets/logo.wu.sm.svg";
 import LanguageIcon from '@mui/icons-material/Language';

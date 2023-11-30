@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import React from "react";
-import "./Contact.css";
+import "./Contact.scss";
 
 const Contact = () => {
   const Wrapper = styled.section``;

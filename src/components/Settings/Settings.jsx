@@ -1,5 +1,5 @@
 import React from 'react'
-import './Settings.css'
+import './Settings.scss'
 import ChevronRightOutlinedIcon from '@mui/icons-material/ChevronRightOutlined';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';

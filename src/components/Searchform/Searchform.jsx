@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./Searchform.css";
+import "./Searchform.scss";
 import dbData from "../../db/db.json";
 import Paper from "@mui/material/Paper";
 import Table from "@mui/material/Table";
